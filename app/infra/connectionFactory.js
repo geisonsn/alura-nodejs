@@ -13,7 +13,6 @@ var mysql = require("mysql");
 */
 
 var connectMySQL = function() {
-   console.log("abrindo a conexao");
    return  mysql.createConnection({
         host : "localhost",
         user : "root",
