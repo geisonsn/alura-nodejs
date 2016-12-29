@@ -249,5 +249,18 @@
         </div>
     </div>
 </footer>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    socket.on('novaPromocao', function(promocao) {
+        console.log(promocao);
+        var textoPromocao = promocao.mensagem;
+        var livro = promocao.livro;
+        var valor = livro.preco - (livro.preco * promocao.desconto / 100); 
+        var textoDesconto = `Livro ${livro.titulo} de ${livro.preco} por ${valor}`;
+        alert(`${textoPromocao} ${textoDesconto}`);
+        
+    });
+</script>
 </body>
 </html>

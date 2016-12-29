@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <form action="/promocoes" method="post">
+       <div>Desconto (%): <input type="number" name="desconto"/></div>
+       <div>Mensagem: <input type="text" name="mensagem"></div>
+       <div>
+            Livro: <select name='livro[id]'>
+                <%for (var i=0; i<lista.length; i++) {%>
+                    <option value="<%=lista[i].id%>"><%=lista[i].titulo%></option>
+                <%}%>
+            </select>
+       </div>
+       <input type="submit" value="Cadastrar promoção"/>
+   </form>
+</body>
+</html>

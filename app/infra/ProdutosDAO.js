@@ -2,6 +2,10 @@ function ProdutosDAO(connection) {
     this._connection = connection;
 }
 
+ProdutosDAO.prototype.get = function(id, callback) {
+    this._connection.query("select * from livros where id = ?", id, callback);
+}
+
 ProdutosDAO.prototype.lista = function(callback) {
     this._connection.query("select * from livros", callback);
 }
