@@ -60,7 +60,7 @@ module.exports = function(app) {
         var connection = app.infra.connectionFactory();
         var produtosDAO = new app.infra.ProdutosDAO(connection);
         produtosDAO.salva(produto, function(erros, resultado) {
-            //console.log(erros);
+            console.log(erros);
             res.redirect("/produtos");
         });
     });
