@@ -31,7 +31,7 @@ var connectMySQL = function() {
     }
     if (process.env.NODE_ENV == 'production') {
         var urlDeConexao = process.env.CLEARDB_DATABASE_URL;
-        var grupos = urlDeconexao.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?reconnect=true/);
+        var grupos = urlDeConexao.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?reconnect=true/);
         
         var user = grupos[1],
             password = grupos[2],
