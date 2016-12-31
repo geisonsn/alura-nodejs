@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "site da casa do codigo",
   "main": "index.js",
+  "engines": {
+    "node": "4.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "node app"
   },
   "author": "geison",
   "license": "ISC",
