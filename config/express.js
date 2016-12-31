@@ -24,11 +24,11 @@ module.exports = function() {
     });
 
     app.use(function (error, req, res, next) {
+        console.log(erro);
         if (process.env.NODE_ENV == 'production') {
             res.status(500).render('erros/500');
             return;
         }
-        console.log(erro);
         next(error);
     });
 
