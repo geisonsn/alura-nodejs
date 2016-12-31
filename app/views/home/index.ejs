@@ -87,6 +87,7 @@
 <!-- inicio da listagem em si-->
 <section id="index-section" class="container middle" ng-controller="HomeController">
 
+    <% if (livros.length) { %>    
     <ul id="home-highlight-collection">
         <%for(i=0; i<3; i++) {%>
         <li class="col-left">
@@ -99,7 +100,7 @@
         </li>
         <%}%>
     </ul>
-
+    <% } %>
 
     <h1 class="cdc-call">Últimos dias com os preços promocionais.
         Aproveite!</h1>
