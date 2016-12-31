@@ -29,14 +29,20 @@ var connectMySQL = function() {
             database : "casadocodigo_nodejs_test"
         });
     }
+    
     if (process.env.NODE_ENV == 'production') {
         var urlDeConexao = process.env.CLEARDB_DATABASE_URL;
+
+        console.log(urlDeConexao);
+
         var grupos = urlDeConexao.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?reconnect=true/);
         
         var user = grupos[1],
             password = grupos[2],
             host = grupos[3],
             database = grupos[4];
+
+        console.log(`User ${user}, password: ${password}, host: ${host}, database: ${database}`);
              
         return  mysql.createConnection({            
             host : host,
